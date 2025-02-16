@@ -1,6 +1,7 @@
 package com.blockchain.blocktrack
 
 import android.app.Application
+import coil3.SingletonImageLoader
 import com.blockchain.blocktrack.di.AppComponent
 import com.blockchain.blocktrack.di.create
 
@@ -8,9 +9,9 @@ class BlockTrackApplication : Application() {
 
     override fun onCreate() {
         appComponent = AppComponent.create(this)
-        /*SingletonImageLoader.setSafe {
-            //appComponent.provideImageLoader()
-        }*/
+        SingletonImageLoader.setSafe {
+            appComponent.provideImageLoader()
+        }
         super.onCreate()
     }
 

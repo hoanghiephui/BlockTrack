@@ -3,6 +3,7 @@ package com.blockchain.blocktrack.utils
 import android.content.Context
 import android.os.Build
 import androidx.appcompat.app.AppCompatDelegate
+import coil3.PlatformContext
 import com.blockchain.blocktrack.utils.ThemePrefUtil.AMOLED
 import com.blockchain.blocktrack.utils.ThemePrefUtil.DARK
 import com.blockchain.blocktrack.utils.ThemePrefUtil.LIGHT
@@ -37,3 +38,5 @@ actual fun KmpContext.setDefaultNightMode(mode: Int) {
 
 actual val KmpContext.dataStoreDir: Path
     get() = File(applicationContext.filesDir, "datastore").path.toPath()
+actual val KmpContext.coilContext: PlatformContext get() = this
+actual val KmpContext.imageCacheDir: Path get() = cacheDir.path.toPath().resolve("image_cache")
