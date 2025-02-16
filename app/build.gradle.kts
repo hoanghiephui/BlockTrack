@@ -62,6 +62,11 @@ kotlin {
             implementation(compose.materialIconsExtended)
             implementation(compose.components.resources)
             implementation(libs.compose.ui.graphics)
+            implementation(libs.compose.material.adaptive)
+            implementation(libs.compose.material.layout)
+            implementation(libs.compose.material.navigation)
+            implementation(libs.compose.material.adaptive.navigation)
+            implementation(libs.compose.material.windowSizeClass)
 
             //logger
             implementation(libs.kermit)

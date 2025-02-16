@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name" translatable="false">BlockTrack</string>
+    <string name="home">Home</string>
+</resources>
