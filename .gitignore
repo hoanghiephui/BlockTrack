@@ -1,0 +1,7 @@
+/.DS_Store
+/.gradle
+/.kotlin
+/app/.DS_Store
+/app/src/.DS_Store
+build
+/local.properties
