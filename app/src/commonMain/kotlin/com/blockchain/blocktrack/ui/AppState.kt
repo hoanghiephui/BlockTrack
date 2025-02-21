@@ -12,6 +12,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navOptions
 import com.blockchain.blocktrack.common.Destinations
 import com.blockchain.blocktrack.ui.home.navigateToHome
+import com.blockchain.blocktrack.ui.search.navigateToSearch
 
 @Composable
 fun rememberAppState(
@@ -70,6 +71,7 @@ class AppState(
 
             when (topLevelDestination) {
                 Destinations.HOME -> navController.navigateToHome(topLevelNavOptions)
+                Destinations.SEARCH -> navController.navigateToSearch(topLevelNavOptions)
             }
         }
     }

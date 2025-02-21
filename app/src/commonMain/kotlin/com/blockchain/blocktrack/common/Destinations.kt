@@ -4,6 +4,7 @@ import blocktrack.app.generated.resources.Res
 import blocktrack.app.generated.resources.home
 import blocktrack.app.generated.resources.outline_home_24
 import com.blockchain.blocktrack.ui.home.HomeRoute
+import com.blockchain.blocktrack.ui.search.SearchRoute
 import org.jetbrains.compose.resources.DrawableResource
 import org.jetbrains.compose.resources.StringResource
 import kotlin.reflect.KClass
@@ -21,5 +22,11 @@ enum class Destinations(
         activeIcon = Res.drawable.outline_home_24,
         label = Res.string.home,
         baseRoute = HomeRoute::class
+    ),
+    SEARCH(
+        route = SearchRoute::class,
+        icon = Res.drawable.outline_home_24,
+        activeIcon = Res.drawable.outline_home_24,
+        label = Res.string.home,
     )
 }

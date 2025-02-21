@@ -5,3 +5,17 @@
 /app/src/.DS_Store
 build
 /local.properties
+/.idea/.gitignore
+/.idea/AndroidProjectSystem.xml
+/.idea/appInsightsSettings.xml
+/.idea/assetWizardSettings.xml
+/.idea/caches/deviceStreaming.xml
+/.idea/deploymentTargetSelector.xml
+/.idea/git_toolbox_blame.xml
+/.idea/gradle.xml
+/.idea/graphql-settings.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/migrations.xml
+/.idea/misc.xml
+/.idea/runConfigurations.xml
+/.idea/vcs.xml
