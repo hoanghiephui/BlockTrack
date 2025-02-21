@@ -35,3 +35,9 @@ private fun appDocDir() = NSFileManager.defaultManager.URLForDirectory(
     create = false,
     error = null,
 )!!.path!!.toPath()
+
+actual class Growth {
+    actual fun inAppRating() {
+
+    }
+}

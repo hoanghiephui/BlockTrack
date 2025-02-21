@@ -7,6 +7,7 @@ import coil3.PlatformContext
 import com.blockchain.blocktrack.utils.ThemePrefUtil.AMOLED
 import com.blockchain.blocktrack.utils.ThemePrefUtil.DARK
 import com.blockchain.blocktrack.utils.ThemePrefUtil.LIGHT
+import com.google.android.play.core.review.ReviewManagerFactory
 import com.russhwolf.settings.Settings
 import com.russhwolf.settings.SharedPreferencesSettings
 import okio.Path
@@ -40,3 +41,24 @@ actual val KmpContext.dataStoreDir: Path
     get() = File(applicationContext.filesDir, "datastore").path.toPath()
 actual val KmpContext.coilContext: PlatformContext get() = this
 actual val KmpContext.imageCacheDir: Path get() = cacheDir.path.toPath().resolve("image_cache")
+
+actual class Growth(
+    private val context: Context
+) {
+    actual fun inAppRating() {
+        val reviewManager = ReviewManagerFactory.create(context)
+        val request = reviewManager.requestReviewFlow()
+        request.addOnCompleteListener { requestInfo ->
+            if (requestInfo.isSuccessful) {
+                // Launch the in-app review flow
+                val reviewInfo = requestInfo.result
+                val flow = reviewManager.launchReviewFlow(context.findActivity(), reviewInfo)
+                flow.addOnCompleteListener { _ ->
+                    // Review flow completed
+                }
+            } else {
+                // Handle the error
+            }
+        }
+    }
+}

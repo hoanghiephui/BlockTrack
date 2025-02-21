@@ -41,6 +41,7 @@ material = "1.12.0"
 media3 = "1.5.1"
 livedata = "1.7.8"
 okio = "3.10.2"
+review = "2.0.2"
 workRuntimeKtx = "2.10.0"
 adaptive = "1.1.0-alpha03"
 
@@ -105,6 +106,8 @@ ksoup = { module = "com.fleeksoft.ksoup:ksoup", version.ref = "ksoup" }
 kermit = { module = "co.touchlab:kermit", version.ref = "kermit" }
 multiplatform-settings = { module = "com.russhwolf:multiplatform-settings", version.ref = "multiplatformSettings" }
 okio = { module = "com.squareup.okio:okio", version.ref = "okio" }
+review = { module = "com.google.android.play:review", version.ref = "review" }
+review-ktx = { module = "com.google.android.play:review-ktx", version.ref = "review" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

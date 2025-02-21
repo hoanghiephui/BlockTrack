@@ -16,3 +16,7 @@ expect fun KmpContext.setDefaultNightMode(mode: Int)
 expect val KmpContext.dataStoreDir: Path
 expect val KmpContext.imageCacheDir: Path
 expect val KmpContext.coilContext: PlatformContext
+
+expect class Growth {
+    fun inAppRating()
+}

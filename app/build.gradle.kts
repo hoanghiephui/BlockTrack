@@ -53,6 +53,8 @@ kotlin {
             implementation(libs.androidx.glance.material3)
             // work Manager
             implementation(libs.androidx.work.runtime.ktx)
+            implementation(libs.review)
+            implementation(libs.review.ktx)
         }
         commonMain.dependencies {
             //compose
